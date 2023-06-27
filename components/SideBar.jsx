@@ -12,6 +12,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { CiShoppingBasket } from "react-icons/ci";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { PiCaretDownBold } from "react-icons/pi";
 
 const SideBar = () => {
   const inactiveLink =
@@ -19,10 +20,9 @@ const SideBar = () => {
   const activeLink =
     "flex mb-2 justify-start items-center gap-4 px-5 bg-slate-400 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto";
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
-    <div className="p-6 h-screen bg-white z-20 fixed top-0 w-64 left-0">
+    <div className="p-6 h-screen bg-white z-20 fixed top-0 w-64 left-0 pt-12">
       <div className="flex flex-col justify-start items-center">
         <h1 className="text-base text-center cursor-pointer font-bold text-blue-900 border-b border-gray-100 pb-4 w-full">
           E-commerce Admin
@@ -53,7 +53,7 @@ const SideBar = () => {
           </Link>
 
           <Link
-            href={"/products"}
+            href={"/products/new_Product"}
             className={
               pathname.includes("/products") ? activeLink : inactiveLink
             }
