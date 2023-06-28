@@ -14,7 +14,7 @@ export default function UpdateProduct() {
       <Breadcrumbs path={links} terminalPath={"Update product"} />
       <Title text={"Update product"} />
       <div class="py-0 px-4 mx-10">
-        <form action="#">
+        <form action="">
           <div class="grid col-span-4 gap-6">
             <div class="col-span-4" />
             <div class="w-full">

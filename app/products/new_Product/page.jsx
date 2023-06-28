@@ -6,6 +6,7 @@ import CustomInput from "@/components/CustomInput";
 import CustomSelect from "@/components/CustomSelect";
 import CustomUploader from "@/components/CustomUploader";
 import CustomTextArea from "@/components/CustomTextArea";
+import Products from "../page";
 export default function NewProduct() {
   const links = [{ text: "Products", href: "/products" }];
 
@@ -26,6 +27,8 @@ export default function NewProduct() {
                 id={"p_name"}
                 required={true}
                 disabled={false}
+                errorMessage={"Required fields*"}
+                error={false}
               />
             </div>
             <div class="w-full">
@@ -46,6 +49,8 @@ export default function NewProduct() {
                 id={"p_category"}
                 required={true}
                 options={[{ text: "haithem", selected: true, value: "h" }]}
+                error={false}
+                errorMessage={"Select a Category*"}
               />
             </div>
 
