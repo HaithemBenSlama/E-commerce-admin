@@ -12,17 +12,23 @@ const CustomSelect = ({ label, id, options, error, errorMessage }) => {
   const errorDescStyle = "mt-2 text-sm text-red-600 dark:text-red-500";
   return (
     <div>
-      <label for="category" class={error ? errorLabelStyle : labelStyle}>
+      <label
+        htmlFor="category"
+        className={error ? errorLabelStyle : labelStyle}
+      >
         {label}
       </label>
-      <select id={id} class={error ? errorInputStyle : inputStyle}>
+      <select
+        id={id}
+        className={error ? errorInputStyle : inputStyle}
+        defaultValue="dv"
+      >
+        <option value="dv">Select a Category</option>
         {options?.map((op) => (
-          <option selected={op?.selected} value={op?.value}>
-            {op?.text}
-          </option>
+          <option value={op?.value}>{op?.text}</option>
         ))}
       </select>
-      <p class={error ? errorDescStyle : "hidden"}>{errorMessage}</p>
+      <p className={error ? errorDescStyle : "hidden"}>{errorMessage}</p>
     </div>
   );
 };

@@ -23,20 +23,20 @@ const CustomInput = ({
   const errorDescStyle = "mt-2 text-sm text-red-600 dark:text-red-500";
   return (
     <div>
-      <label for={name} class={error ? errorLabelStyle : labelStyle}>
+      <label htmlFor={name} className={error ? errorLabelStyle : labelStyle}>
         {label}
       </label>
       <input
         type={type}
         name={name}
         id={id}
-        class={error ? errorInputStyle : inputStyle}
+        className={error ? errorInputStyle : inputStyle}
         placeholder={placeholder}
         required={required}
         disabled={disabled}
         value={value}
       />
-      <p class={error ? errorDescStyle : "hidden"}>{errorMessage}</p>
+      <p className={error ? errorDescStyle : "hidden"}>{errorMessage}</p>
     </div>
   );
 };

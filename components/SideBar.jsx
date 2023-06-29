@@ -12,7 +12,6 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { CiShoppingBasket } from "react-icons/ci";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { PiCaretDownBold } from "react-icons/pi";
 
 const SideBar = () => {
   const inactiveLink =

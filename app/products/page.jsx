@@ -3,13 +3,14 @@ import Layout from "@/components/Layout";
 import Search from "@/components/Search";
 import TablePagination from "@/components/TablePagination";
 import Title from "@/components/Title";
-import { Link } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { useMemo } from "react";
 import { MdDeleteOutline } from "react-icons/md";
 import { PiNotePencilBold } from "react-icons/pi";
 
 export default function Products() {
+  const router = useRouter();
   const columns = useMemo(
     () => [
       {
@@ -50,15 +51,15 @@ export default function Products() {
   );
   return (
     <Layout>
-      <nav class="flex m-4 " aria-label="Breadcrumb">
-        <ol class="inline-flex items-center space-x-1 md:space-x-3">
-          <li class="inline-flex items-center">
+      <nav className="flex m-4 " aria-label="Breadcrumb">
+        <ol className="inline-flex items-center space-x-1 md:space-x-3">
+          <li className="inline-flex items-center">
             <a
               href="#"
-              class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+              className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
             >
               <svg
-                class="w-4 h-4 mr-2"
+                className="w-4 h-4 mr-2"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,22 +70,22 @@ export default function Products() {
             </a>
           </li>
           <li>
-            <div class="flex items-center">
+            <div className="flex items-center">
               <svg
-                class="w-6 h-6 text-gray-400"
+                className="w-6 h-6 text-gray-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
               <a
                 href="#"
-                class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white"
+                className="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white"
               >
                 Products
               </a>
@@ -164,8 +165,8 @@ export default function Products() {
       ></TablePagination>
       <div className="ml-6">
         <button
-          href="/products/new_Product"
-          class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-gray-700 rounded-lg focus:ring-4 focus:ring-gray-200 hover:bg-gray-800"
+          onClick={() => router.push("/products/new_Product")}
+          className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-gray-700 rounded-lg focus:ring-4 focus:ring-gray-200 hover:bg-gray-800"
         >
           Add new product
         </button>
