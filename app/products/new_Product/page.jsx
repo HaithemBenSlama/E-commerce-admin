@@ -49,7 +49,7 @@ export default function NewProduct() {
                 id={"p_category"}
                 required={true}
                 options={[{ text: "haithem", selected: true, value: "h" }]}
-                error={false}
+                error={true}
                 errorMessage={"Select a Category*"}
               />
             </div>

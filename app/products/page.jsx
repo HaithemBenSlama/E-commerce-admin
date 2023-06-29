@@ -1,7 +1,53 @@
+"use client";
 import Layout from "@/components/Layout";
+import Search from "@/components/Search";
+import TablePagination from "@/components/TablePagination";
+import Title from "@/components/Title";
+import { Link } from "lucide-react";
 import React from "react";
+import { useMemo } from "react";
+import { MdDeleteOutline } from "react-icons/md";
+import { PiNotePencilBold } from "react-icons/pi";
 
 export default function Products() {
+  const columns = useMemo(
+    () => [
+      {
+        Header: "N°",
+        accessor: (row, index) => index + 1,
+      },
+      {
+        Header: "Name",
+        accessor: "p_name",
+      },
+      {
+        Header: "SKU",
+        accessor: "p_sku",
+      },
+      {
+        Header: "Quantity",
+        accessor: "p_quantity",
+      },
+      {
+        Header: "Price",
+        accessor: "p_price",
+      },
+      {
+        Header: "Discount",
+        accessor: "p_discount",
+      },
+      {
+        Header: "Actions",
+        Cell: ({ row }) => (
+          <div className="flex gap-5">
+            <MdDeleteOutline className="text-lg hover:cursor-pointer hover:scale-150 hover:duration-300 hover:text-red-500" />
+            <PiNotePencilBold className="text-lg hover:cursor-pointer hover:scale-150 hover:duration-300 hover:text-yellow-500" />
+          </div>
+        ),
+      },
+    ],
+    []
+  );
   return (
     <Layout>
       <nav class="flex m-4 " aria-label="Breadcrumb">
@@ -46,9 +92,84 @@ export default function Products() {
           </li>
         </ol>
       </nav>
-      <h2 class="m-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl dark:text-white">
-        Product management
-      </h2>
+      <Title text={"Product management"} />
+      <Search />
+      <TablePagination
+        columns={columns}
+        data={[
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "25%",
+          },
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "25%",
+          },
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "25%",
+          },
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "-",
+          },
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "25%",
+          },
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "25%",
+          },
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "25%",
+          },
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "25%",
+          },
+          {
+            p_name: "iphone 11 pro max",
+            p_sku: "RFKIO152S",
+            p_quantity: 10,
+            p_price: 2966,
+            p_discount: "25%",
+          },
+        ]}
+      ></TablePagination>
+      <div className="ml-6">
+        <button
+          href="/products/new_Product"
+          class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-gray-700 rounded-lg focus:ring-4 focus:ring-gray-200 hover:bg-gray-800"
+        >
+          Add new product
+        </button>
+      </div>
     </Layout>
   );
 }
