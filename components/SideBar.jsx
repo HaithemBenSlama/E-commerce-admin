@@ -52,7 +52,7 @@ const SideBar = () => {
           </Link>
 
           <Link
-            href={"/products/new_Product"}
+            href={"/products"}
             className={
               pathname.includes("/products") ? activeLink : inactiveLink
             }

@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/navigation";
 
 export const Breadcrumbs = ({ path, terminalPath }) => {
-  const router = useRouter();
-
   return (
     <nav className="flex m-4 " aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
