@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { FaFilter } from "react-icons/fa";
+import { BsChevronDown } from "react-icons/bs";
 
-export default function FiltreButton() {
+export default function FiltreButton({ categories }) {
   const [filtreShow, setFiltreshow] = useState(false);
-  const styleFiltreShow = "z-10 w-48 p-3 bg-white rounded-lg shadow";
+  const styleFiltreShow =
+    "z-10 w-48 p-3 bg-white rounded-lg shadow absolute right-0 mt-2 bg-gray-100 overflow-y-auto max-h-52";
   const styleFiltreHide = "z-10 hidden w-48 p-3 bg-white rounded-lg shadow";
+
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <button
         id="filterDropdownButton"
         data-dropdown-toggle="filterDropdown"
@@ -17,7 +21,7 @@ export default function FiltreButton() {
       >
         <FaFilter className="h-4 w-4 mr-2 text-gray-400" />
         Filter
-        <ChevronRightIcon className="-mr-1 ml-1.5 w-4 h-4" />
+        <BsChevronDown className="-mr-1 ml-1.5 w-4 h-4" />
       </button>
       <div
         id="filterDropdown"
@@ -31,9 +35,8 @@ export default function FiltreButton() {
           aria-labelledby="filterDropdownButton"
         >
           {categories?.map((c, index) => (
-            <li className="flex items-center">
+            <li className="flex items-center" key={index}>
               <input
-                key={index}
                 id={c?.id}
                 type="checkbox"
                 className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-slate-600 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"

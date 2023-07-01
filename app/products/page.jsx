@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Layout from "@/components/Layout";
 import Popup from "@/components/PopupDelete";
 import TablePagination from "@/components/TablePagination";
+import TableProduct from "@/components/TableProduct";
 import Title from "@/components/Title";
 import React, { useState } from "react";
 import { useMemo } from "react";
@@ -75,7 +76,7 @@ export default function Products() {
         Page. Add, delete, and edit items effortlessly to ensure an optimal
         shopping experience for our customers.
       </p>
-      <TablePagination
+      <TableProduct
         columns={columns}
         data={[
           {

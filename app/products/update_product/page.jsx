@@ -143,7 +143,7 @@ export default function UpdateProduct() {
             type="submit"
             className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-gray-700 rounded-lg focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-900 hover:bg-gray-800"
           >
-            Add product
+            Update Product
           </button>
         </form>
       </div>
