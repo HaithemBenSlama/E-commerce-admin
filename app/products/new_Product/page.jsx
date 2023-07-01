@@ -6,7 +6,6 @@ import CustomInput from "@/components/CustomInput";
 import CustomSelect from "@/components/CustomSelect";
 import CustomUploader from "@/components/CustomUploader";
 import CustomTextArea from "@/components/CustomTextArea";
-import Products from "../page";
 export default function NewProduct() {
   const links = [{ text: "Products", href: "/products" }];
 

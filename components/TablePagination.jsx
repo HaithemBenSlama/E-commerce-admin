@@ -4,12 +4,16 @@ import { useTable, usePagination } from "react-table";
 import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
 import { FaFilter } from "react-icons/fa";
 import Search from "./Search";
+import { useRouter } from "next/navigation";
+import PrimaryButton from "./PrimaryButton";
+import { AiOutlinePlus } from "react-icons/ai";
 
 const TablePagination = ({ columns, data, categories }) => {
   const [pageIndex, setPageIndex] = useState(0); // initialize pageIndex state
   const [filtreShow, setFiltreshow] = useState(false);
   const styleFiltreShow = "z-10 w-48 p-3 bg-white rounded-lg shadow";
   const styleFiltreHide = "z-10 hidden w-48 p-3 bg-white rounded-lg shadow";
+  const router = useRouter();
 
   const {
     getTableProps,
@@ -43,69 +47,12 @@ const TablePagination = ({ columns, data, categories }) => {
               <Search />
             </div>
             <div className="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-              <button
-                type="button"
-                className="flex items-center justify-center text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:ring-slate-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-slate-600 dark:hover:bg-slate-700 focus:outline-none dark:focus:ring-slate-800"
-              >
-                <svg
-                  className="h-3.5 w-3.5 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    clipRule="evenodd"
-                    fillRule="evenodd"
-                    d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                  />
-                </svg>
-                Add product
-              </button>
-              <div className="flex items-center space-x-3 w-full md:w-auto">
-                <button
-                  id="filterDropdownButton"
-                  data-dropdown-toggle="filterDropdown"
-                  className="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-slate-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                  type="button"
-                  onClick={() => {
-                    setFiltreshow(!filtreShow);
-                  }}
-                >
-                  <FaFilter className="h-4 w-4 mr-2 text-gray-400" />
-                  Filter
-                  <ChevronRightIcon className="-mr-1 ml-1.5 w-4 h-4" />
-                </button>
-                <div
-                  id="filterDropdown"
-                  className={filtreShow ? styleFiltreShow : styleFiltreHide}
-                >
-                  <h6 className="mb-3 text-sm font-medium border-b-2 text-gray-900 dark:text-white">
-                    Choose brand
-                  </h6>
-                  <ul
-                    className="space-y-2 text-sm"
-                    aria-labelledby="filterDropdownButton"
-                  >
-                    {categories?.map((c, index) => (
-                      <li className="flex items-center">
-                        <input
-                          key={index}
-                          id={c?.id}
-                          type="checkbox"
-                          className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-slate-600 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                        />
-                        <label
-                          htmlFor={c?.id}
-                          className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100"
-                        >
-                          {c?.name} ({c?.nb_product})
-                        </label>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <PrimaryButton
+                icon={<AiOutlinePlus className="h-3.5 w-3.5 mr-2" />}
+                text={"Add new Product"}
+                href={"/products/new_Product"}
+              />
+              <div className="flex items-center space-x-3 w-full md:w-auto"></div>
             </div>
           </div>
           <div className="overflow-x-auto">
