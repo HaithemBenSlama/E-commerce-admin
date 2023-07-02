@@ -50,6 +50,7 @@ export default function NewProduct() {
                 options={[{ text: "haithem", selected: true, value: "h" }]}
                 error={false}
                 errorMessage={"Select a Category*"}
+                defaultValue={"Select a Category"}
               />
             </div>
 

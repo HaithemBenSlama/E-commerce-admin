@@ -2,7 +2,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Layout from "@/components/Layout";
 import Popup from "@/components/PopupDelete";
-import TablePagination from "@/components/TablePagination";
 import TableProduct from "@/components/TableProduct";
 import Title from "@/components/Title";
 import React, { useState } from "react";
@@ -14,7 +13,6 @@ export default function Products() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleDelete = () => {
-    // Perform the delete action for the product
     console.log("Deleting product:");
   };
 

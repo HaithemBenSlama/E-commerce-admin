@@ -124,7 +124,7 @@ export default function UpdateProduct() {
                 htmlFor="item-weight"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Photos
+                Photos (max:5)
               </label>
 
               <div className="flex gap-3">

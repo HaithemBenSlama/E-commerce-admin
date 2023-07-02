@@ -3,9 +3,9 @@ import React from "react";
 
 const Popup = ({ isOpen, onClose, onDelete }) => {
   const closeStyle =
-    "fixed top-0 left-0 right-0 z-50 hidden items-center justify-center w-full h-screen bg-opacity-75 bg-blur backdrop-filter backdrop-blur-md";
+    "fixed top-0 left-0 right-0 z-50 hidden items-center justify-center w-full h-screen bg-opacity-75 backdrop-blur-sm";
   const openStyle =
-    "fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full h-screen bg-opacity-75 bg-blur backdrop-filter backdrop-blur-md";
+    "fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full h-screen bg-opacity-75 backdrop-blur-sm";
 
   const handleDelete = () => {
     onDelete();
@@ -17,7 +17,7 @@ const Popup = ({ isOpen, onClose, onDelete }) => {
       tabIndex="-1"
       className={isOpen ? openStyle : closeStyle}
     >
-      <div className="bg-white rounded-lg shadow w-full max-w-md">
+      <div className="bg-white rounded-lg shadow w-full max-w-md  ">
         <button
           type="button"
           className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
