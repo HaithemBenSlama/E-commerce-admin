@@ -146,7 +146,6 @@ const SideBar = () => {
           </Link>
         </div>
 
-        {/* settings */}
         <div className="my-4 border-b border-gray-100 pb-4 w-full">
           <Link
             href={"/settings"}
@@ -204,6 +203,29 @@ const SideBar = () => {
               Logout
             </h3>
           </Link>
+        </div>
+        <div className=" mt-10 w-full border-t-2">
+          <div className="max-w-sm divide-y divide-gray-200">
+            <div className="py-3 sm:py-4">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0">
+                  <img
+                    class="w-10 h-10 rounded-full"
+                    src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX9c2poL&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDT16UNPh6KXDAz900BHei0Tdsa667Vj3dgiQ4dQvgeqg&oe=64A72556"
+                    alt="Neil image"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                    Haithem Ben Slama
+                  </p>
+                  <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                    Haithem@hotmail.fr
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

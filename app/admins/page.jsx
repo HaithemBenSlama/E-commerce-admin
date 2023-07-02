@@ -1,5 +1,8 @@
 import Layout from "@/components/Layout";
+import React from "react";
 
-export default function Admins() {
-  return <Layout>Admins page here</Layout>;
+function page() {
+  return <Layout>page</Layout>;
 }
+
+export default page;
