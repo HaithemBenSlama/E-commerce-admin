@@ -25,7 +25,7 @@ export const GeneralInfo = () => {
           errorMessage={"Invalid adresse mail"}
           id={"admin_mail"}
           label={"Email"}
-          name={"admin_name"}
+          name={"admin_mail"}
           placeholder={"exemple@company.com"}
           required={true}
           type={"email"}
