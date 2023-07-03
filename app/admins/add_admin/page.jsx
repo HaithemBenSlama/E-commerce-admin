@@ -41,7 +41,7 @@ const AccountSettings = () => {
           </div>
           <div className="w-2/3 p-8 bg-yellow-500">
             <form>
-              <div class="grid gap-6 mb-6 md:grid-cols-2">
+              <div class="grid gap-6 h-full md:grid-cols-2">
                 <div>
                   <label
                     for="first_name"

@@ -6,8 +6,8 @@ import {
   BiLogOut,
   BiShoppingBag,
   BiCategory,
+  BiUserCircle,
 } from "react-icons/bi";
-import { FiSettings } from "react-icons/fi";
 import { AiOutlineMessage } from "react-icons/ai";
 import { CiShoppingBasket } from "react-icons/ci";
 import Link from "next/link";
@@ -148,26 +148,26 @@ const SideBar = () => {
 
         <div className="my-4 border-b border-gray-100 pb-4 w-full">
           <Link
-            href={"/settings"}
+            href={"/profile"}
             className={
-              pathname.includes("/settings") ? activeLink : inactiveLink
+              pathname.includes("/profile") ? activeLink : inactiveLink
             }
           >
-            <FiSettings
+            <BiUserCircle
               className={
-                pathname.includes("/settings")
+                pathname.includes("/profile")
                   ? "text-2xl"
                   : "text-2xl text-gray-600 group-hover:text-white"
               }
             />
             <h3
               className={
-                pathname.includes("/settings")
+                pathname.includes("/profile")
                   ? "font-semibold"
                   : "text-base text-gray-800 group-hover:text-white font-semibold"
               }
             >
-              Settings
+              Profile
             </h3>
           </Link>
 
