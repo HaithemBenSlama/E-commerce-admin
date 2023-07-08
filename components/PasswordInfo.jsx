@@ -4,7 +4,7 @@ import PrimaryButton from "@/components/PrimaryButton";
 import { FaRegSave } from "react-icons/fa";
 export default function PasswordInfo() {
   return (
-    <div className="row-auto col-auto rounded-md shadow-md bg-gray-200 p-5 -mt-14 ">
+    <div className="row-auto col-auto rounded-md shadow-md bg-gray-100 p-5 -mt-14 ">
       <h6 className="text-lg font-bold underline mb-2">Password information</h6>
       <div className="mb-2">
         <CustomInput

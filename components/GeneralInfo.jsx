@@ -5,7 +5,7 @@ import { FaRegSave } from "react-icons/fa";
 
 export const GeneralInfo = () => {
   return (
-    <div className="row-span-2 col-span-1  rounded-lg shadow-md bg-gray-200 p-5">
+    <div className="row-span-2 col-span-1  rounded-lg shadow-md bg-gray-100 p-5">
       <h6 class="text-lg font-bold underline mb-2">General information</h6>
       <div class="grid gap-6 md:grid-cols-2 mb-3">
         <CustomInput

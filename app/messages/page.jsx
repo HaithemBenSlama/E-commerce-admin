@@ -29,6 +29,7 @@ export default function Messages() {
               }
               name={"Iheb Ben Slama"}
               lastMessage={"Bonjour"}
+              messageCount={2}
             />
             <ListeIncomingMessage
               img={
@@ -36,34 +37,7 @@ export default function Messages() {
               }
               name={"Haithem Ben Slama"}
               lastMessage={"Bonjour"}
-            />
-            <ListeIncomingMessage
-              img={
-                "https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX9c2poL&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDT16UNPh6KXDAz900BHei0Tdsa667Vj3dgiQ4dQvgeqg&oe=64A72556"
-              }
-              name={"Haithem Ben Slama"}
-              lastMessage={"Bonjour"}
-            />
-            <ListeIncomingMessage
-              img={
-                "https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX9c2poL&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDT16UNPh6KXDAz900BHei0Tdsa667Vj3dgiQ4dQvgeqg&oe=64A72556"
-              }
-              name={"Haithem Ben Slama"}
-              lastMessage={"Bonjour"}
-            />
-            <ListeIncomingMessage
-              img={
-                "https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX9c2poL&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDT16UNPh6KXDAz900BHei0Tdsa667Vj3dgiQ4dQvgeqg&oe=64A72556"
-              }
-              name={"Haithem Ben Slama"}
-              lastMessage={"Bonjour"}
-            />
-            <ListeIncomingMessage
-              img={
-                "https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX9c2poL&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDT16UNPh6KXDAz900BHei0Tdsa667Vj3dgiQ4dQvgeqg&oe=64A72556"
-              }
-              name={"Haithem Ben Slama"}
-              lastMessage={"Bonjour"}
+              messageCount={1}
             />
           </ol>
         </div>
@@ -91,6 +65,7 @@ export default function Messages() {
           <div className="p-4 overflow-y-auto h-[332px] container">
             <MessageSent />
             <MessageReceived />
+            <MessageSent />
             <MessageSent />
             <MessageSent />
           </div>

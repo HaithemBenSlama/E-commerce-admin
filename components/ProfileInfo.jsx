@@ -4,7 +4,7 @@ import { FiUploadCloud } from "react-icons/fi";
 
 export const ProfileInfo = () => {
   return (
-    <div className="col-auto row-auto rounded-md shadow-md bg-gray-200 h-[158px] flex items-center p-7">
+    <div className="col-auto row-auto rounded-md shadow-md bg-gray-100 h-[158px] flex items-center p-7">
       <div className="mx-6 ">
         <img
           className="w-24 h-24 rounded-full"
