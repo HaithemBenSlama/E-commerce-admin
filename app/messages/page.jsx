@@ -2,6 +2,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Layout from "@/components/Layout";
 import ListeIncomingMessage from "@/components/ListeIncomingMessage";
 import MessageInput from "@/components/MessageInput";
+import MessageReceived from "@/components/MessageReceived";
+import MessageSent from "@/components/MessageSent";
 import Search from "@/components/Search";
 import Title from "@/components/Title";
 import { AiOutlineDelete, AiOutlineInfoCircle } from "react-icons/ai";
@@ -23,17 +25,9 @@ export default function Messages() {
           <ol class="mt-3 divide-y-4 bg-gray-300 rounded-lg overflow-y-auto max-h-[300px] ">
             <ListeIncomingMessage
               img={
-                "https://scontent.ftun10-1.fna.fbcdn.net/v/t39.30808-6/347430541_966697281419948_1123545065253865045_n.jpg?_nc_cat=105&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=1LG8pm4p__EAX-wVWLW&_nc_ht=scontent.ftun10-1.fna&oh=00_AfCaOQDEcqN_Iuj7s22zzwnfDYyvYV6pdosd23NAiJsDFg&oe=64ADFC89"
+                "https://scontent.ftun10-1.fna.fbcdn.net/v/t39.30808-6/278379010_108857205133658_2458177458228774882_n.jpg?_nc_cat=110&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ntiR4ajyqY0AX-BpafT&_nc_ht=scontent.ftun10-1.fna&oh=00_AfAaoHb3m7tEjhny9jVRzOzQp3iAVPzvnYkbZnQTS6lVdw&oe=64AD9E15"
               }
-              name={"Haifa Ben Slama"}
-              lastMessage={"Salut"}
-              messageCount={3}
-            />
-            <ListeIncomingMessage
-              img={
-                "https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX9c2poL&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDT16UNPh6KXDAz900BHei0Tdsa667Vj3dgiQ4dQvgeqg&oe=64A72556"
-              }
-              name={"Haithem Ben Slama"}
+              name={"Iheb Ben Slama"}
               lastMessage={"Bonjour"}
             />
             <ListeIncomingMessage
@@ -78,11 +72,11 @@ export default function Messages() {
             <div className="flex items-center">
               <img
                 className="w-10 h-10 mb-3 mr-3 rounded-full sm:mb-0"
-                src="https://scontent.ftun10-1.fna.fbcdn.net/v/t39.30808-6/347430541_966697281419948_1123545065253865045_n.jpg?_nc_cat=105&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=1LG8pm4p__EAX-wVWLW&_nc_ht=scontent.ftun10-1.fna&oh=00_AfCaOQDEcqN_Iuj7s22zzwnfDYyvYV6pdosd23NAiJsDFg&oe=64ADFC89"
-                alt="Jese Leos image"
+                src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX9c2poL&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDT16UNPh6KXDAz900BHei0Tdsa667Vj3dgiQ4dQvgeqg&oe=64A72556"
+                alt="Haithem Ben Slama image"
               />
               <span className="text-lg font-medium text-gray-900">
-                Haifa Ben Slama
+                Haithem Ben Slama
               </span>
             </div>
             <div className="flex">
@@ -94,9 +88,11 @@ export default function Messages() {
               </button>
             </div>
           </div>
-          <div className="p-4 overflow-y-auto h-[332px]">
-            {/* Message body */}
-            {/* Add your message components here */}
+          <div className="p-4 overflow-y-auto h-[332px] container">
+            <MessageSent />
+            <MessageReceived />
+            <MessageSent />
+            <MessageSent />
           </div>
           <div className="p-1 bg-gray-200 rounded-md h-16">
             <MessageInput />
