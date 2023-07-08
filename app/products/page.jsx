@@ -8,6 +8,11 @@ import React, { useState } from "react";
 import { useMemo } from "react";
 import { MdDeleteOutline } from "react-icons/md";
 import { PiNotePencilBold } from "react-icons/pi";
+import ItemName from "./Components/Table/ItemName";
+import Category from "./Components/Table/Category";
+import Stock from "./Components/Table/Stock";
+import Rating from "./Components/Table/Rating";
+import Sales from "./Components/Table/Sales";
 
 export default function Products() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -31,23 +36,33 @@ export default function Products() {
       },
       {
         Header: "Product Name",
-        accessor: "p_name",
+        accessor: ({ p_name, p_photo }) => (
+          <ItemName name={p_name} hrefImg={p_photo} />
+        ),
       },
       {
         Header: "Category",
-        accessor: "p_category",
+        accessor: ({ p_category }) => <Category category={p_category} />,
+      },
+      {
+        Header: "Stock",
+        accessor: ({ p_stock }) => <Stock stock={p_stock} />,
       },
       {
         Header: "Brand",
         accessor: "p_brand",
       },
       {
-        Header: "Color",
-        accessor: "p_color",
+        Header: "Rating",
+        accessor: ({ p_rating }) => <Rating rate={p_rating} />,
       },
       {
-        Header: "Discount",
-        accessor: "p_discount",
+        Header: "Sales",
+        accessor: ({ p_sales }) => <Sales sales={p_sales} />,
+      },
+      {
+        Header: "Revenue",
+        accessor: "p_revenue",
       },
       {
         Header: "Actions",
@@ -64,6 +79,66 @@ export default function Products() {
     ],
     []
   );
+  const data = useMemo(
+    () => [
+      {
+        p_photo:
+          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
+        p_name: "Apple iMac 27''",
+        p_category: "Desktop PC",
+        p_stock: 100,
+        p_brand: "Apple",
+        p_rating: 4,
+        p_sales: "1.6M",
+        p_revenue: "$3.5M",
+      },
+      {
+        p_photo:
+          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
+        p_name: "Apple iMac 27''",
+        p_category: "Desktop PC",
+        p_stock: 100,
+        p_brand: "Apple",
+        p_rating: 4,
+        p_sales: "1.6M",
+        p_revenue: "$3.5M",
+      },
+      {
+        p_photo:
+          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
+        p_name: "Apple iMac 27''",
+        p_category: "Desktop PC",
+        p_stock: 100,
+        p_brand: "Apple",
+        p_rating: 4,
+        p_sales: "1.6M",
+        p_revenue: "$3.5M",
+      },
+      {
+        p_photo:
+          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
+        p_name: "Apple iMac 27''",
+        p_category: "Desktop PC",
+        p_stock: 100,
+        p_brand: "Apple",
+        p_rating: 4,
+        p_sales: "1.6M",
+        p_revenue: "$3.5M",
+      },
+      {
+        p_photo:
+          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
+        p_name: "Apple iMac 27''",
+        p_category: "Desktop PC",
+        p_stock: 100,
+        p_brand: "Apple",
+        p_rating: 4,
+        p_sales: "1.6M",
+        p_revenue: "$3.5M",
+      },
+    ],
+    []
+  );
   return (
     <Layout>
       <Breadcrumbs terminalPath={"Products"} />
@@ -76,407 +151,7 @@ export default function Products() {
       </p>
       <TableProduct
         columns={columns}
-        data={[
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-          {
-            p_name: "Iphone 11 pro max",
-            p_category: "phone",
-            p_brand: "Apple",
-            p_color: "silver",
-            p_discount: "25%",
-          },
-        ]}
+        data={data}
         categories={[{ id: 1, name: "Apple", nb_product: "15" }]}
       />
       <Popup
