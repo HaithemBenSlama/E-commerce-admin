@@ -130,7 +130,7 @@ export default function Products() {
           "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
         p_name: "Apple iMac 27''",
         p_category: "Desktop PC",
-        p_stock: 100,
+        p_stock: 300,
         p_brand: "Apple",
         p_rating: 4,
         p_sales: "1.6M",

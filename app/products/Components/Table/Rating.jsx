@@ -37,14 +37,12 @@ const Rating = ({ rate = 0 }) => {
   };
 
   return (
-    <td className="py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-      <div className="flex items-center">
-        {renderStars()}
-        <span className="ml-1 text-gray-500 dark:text-gray-400">
-          {rate.toFixed(1)}
-        </span>
-      </div>
-    </td>
+    <div className="flex items-center">
+      {renderStars()}
+      <span className="ml-1 text-gray-500 dark:text-gray-400">
+        {rate.toFixed(1)}
+      </span>
+    </div>
   );
 };
 
