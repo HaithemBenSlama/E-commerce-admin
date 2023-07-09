@@ -1,11 +1,11 @@
 import React from "react";
 import CustomInput from "@/components/CustomInput";
-const GeneralInfo = ({ setActiveStep }) => {
+const AccountInfo = ({ setActiveStep }) => {
   return (
     <div className="row-span-2 col-span-1 rounded-2xl shadow-xl bg-gray-200 p-5 px-10 mx-28 flex flex-col justify-between">
       <div>
         <h6 className="text-xl font-bold underline mb-4">
-          General Information
+          Account Information
         </h6>
 
         <div class="grid gap-6 md:grid-cols-2 mb-3">
@@ -13,21 +13,21 @@ const GeneralInfo = ({ setActiveStep }) => {
             disabled={false}
             error={false}
             errorMessage={""}
-            id={"admin_country"}
-            label={"Country"}
-            name={"admin_country"}
-            placeholder={"e.g Tunisia"}
+            id={"newadmin_firstName"}
+            label={"First Name"}
+            name={"newadmin_firstname"}
+            placeholder={"First Name"}
             required={true}
             type={"text"}
           />
           <CustomInput
             disabled={false}
             error={false}
-            errorMessage={"Invalid adresse mail"}
-            id={"admin_city"}
-            label={"City"}
-            name={"admin_city"}
-            placeholder={"e.g Kairouan"}
+            errorMessage={""}
+            id={"newadmin_lastName"}
+            label={"Last Name"}
+            name={"newadmin_lastName"}
+            placeholder={"Last Name"}
             required={true}
             type={"text"}
           />
@@ -37,23 +37,23 @@ const GeneralInfo = ({ setActiveStep }) => {
             disabled={false}
             error={false}
             errorMessage={""}
-            id={"admin_zip_code"}
-            label={"Zip Code"}
-            name={"admin_zip_code"}
-            placeholder={"123456"}
+            id={"newadmin_email"}
+            label={"E-mail"}
+            name={"newadmin_email"}
+            placeholder={"E-mail"}
             required={true}
-            type={"number"}
+            type={"email"}
           />
           <CustomInput
             disabled={false}
             error={false}
             errorMessage={""}
-            id={"admin_phone_number"}
-            label={"Phone Number"}
-            name={"admin_phone_number"}
-            placeholder={"e.g +216 25 365 142"}
+            id={"newadmin_pass"}
+            label={"Password"}
+            name={"newadmin_pass"}
+            placeholder={"••••••••"}
             required={true}
-            type={"number"}
+            type={"password"}
           />
         </div>
         <div class="grid gap-6 md:grid-cols-2 mb-3">
@@ -61,23 +61,12 @@ const GeneralInfo = ({ setActiveStep }) => {
             disabled={false}
             error={false}
             errorMessage={""}
-            id={"admin_role"}
-            label={"Role"}
-            name={"admin_role"}
-            placeholder={"e.g Marketing"}
+            id={"newadmin_passConfirm"}
+            label={"Confirm Password"}
+            name={"newadmin_passConfirm"}
+            placeholder={"••••••••"}
             required={true}
-            type={"text"}
-          />
-          <CustomInput
-            disabled={false}
-            error={false}
-            errorMessage={""}
-            id={"admin_organization"}
-            label={"Organization"}
-            name={"admin_organization"}
-            placeholder={"Company Name"}
-            required={true}
-            type={"text"}
+            type={"password"}
           />
         </div>
       </div>
@@ -86,7 +75,7 @@ const GeneralInfo = ({ setActiveStep }) => {
           <button
             type="button"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            onClick={() => setActiveStep(3)}
+            onClick={() => setActiveStep(2)}
           >
             Next
             <svg
@@ -111,4 +100,4 @@ const GeneralInfo = ({ setActiveStep }) => {
   );
 };
 
-export default GeneralInfo;
+export default AccountInfo;

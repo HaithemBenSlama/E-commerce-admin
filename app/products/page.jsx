@@ -144,7 +144,7 @@ export default function Products() {
       <Breadcrumbs terminalPath={"Products"} />
 
       <Title text={"Product Management"} />
-      <p class="mb-4 mx-10 text-lg font-normal text-gray-500 dark:text-gray-400">
+      <p class="mb-4 mx-10 text-lg font-normal text-gray-500">
         Take full control of our store's products with our Product Management
         Page. Add, delete, and edit items effortlessly to ensure an optimal
         shopping experience for our customers.
