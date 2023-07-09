@@ -56,7 +56,7 @@ const TablePagination = ({ columns, data }) => {
               </tr>
             ))}
           </thead>
-          <tbody className="border-b" {...getTableBodyProps()}>
+          <tbody className="border-b text-gray-800" {...getTableBodyProps()}>
             {page.map((row) => {
               prepareRow(row);
               return (

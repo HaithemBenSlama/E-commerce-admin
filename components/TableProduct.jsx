@@ -21,7 +21,10 @@ export default function TableProduct({ columns, data, categories }) {
                 href={"/products/new_Product"}
               />
               <div className="flex items-center space-x-3 w-full md:w-auto">
-                <FiltreButton categories={categories} />
+                <FiltreButton
+                  categories={categories}
+                  text={"Choose Catgeory"}
+                />
               </div>
             </div>
           </div>

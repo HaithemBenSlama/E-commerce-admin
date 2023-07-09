@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaFilter } from "react-icons/fa";
 import { BsChevronDown } from "react-icons/bs";
 
-export default function FiltreButton({ categories }) {
+export default function FiltreButton({ text, categories }) {
   const [filtreShow, setFiltreshow] = useState(false);
   const styleFiltreShow =
     "z-10 w-48 p-3 bg-white rounded-lg shadow absolute right-0 mt-2 bg-gray-100 overflow-y-auto max-h-52";
@@ -28,7 +28,7 @@ export default function FiltreButton({ categories }) {
         className={filtreShow ? styleFiltreShow : styleFiltreHide}
       >
         <h6 className="mb-3 text-sm font-medium border-b-2 text-gray-900 dark:text-white">
-          Choose brand
+          {text}
         </h6>
         <ul
           className="space-y-2 text-sm"
