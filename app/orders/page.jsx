@@ -2,15 +2,8 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Layout from "@/components/Layout";
 import Title from "@/components/Title";
-import React, { useState } from "react";
+import React from "react";
 import { useMemo } from "react";
-import { MdDeleteOutline } from "react-icons/md";
-import { PiNotePencilBold } from "react-icons/pi";
-import ItemName from "../products/Components/Table/ItemName";
-import Category from "../products/Components/Table/Category";
-import Stock from "../products/Components/Table/Stock";
-import Rating from "../products/Components/Table/Rating";
-import Sales from "../products/Components/Table/Sales";
 import TableOrders from "@/components/TableOrders";
 import { FaRegFilePdf } from "react-icons/fa";
 import TransactionCol from "./components/table/TransactionCol";
