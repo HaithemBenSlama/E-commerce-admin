@@ -13,14 +13,12 @@ export const StepperIndicator = ({ activeStep, totalSteps }) => {
           <div className="flex items-center">
             <div
               className={`z-10 flex items-center justify-center w-10 h-10 rounded-full ring-0 ring-white shrink-0 ${
-                index < activeStep - 1
-                  ? "bg-blue-600"
-                  : "bg-gray-200 dark:bg-gray-700"
-              } ${index === activeStep - 1 ? "bg-blue-600" : ""}`}
+                index === activeStep - 1 ? "bg-blue-700" : "bg-gray-200"
+              }`}
             >
               <svg
                 className={`w-3 h-3 ${
-                  index < activeStep - 1 ? "text-blue-100" : "text-gray-800"
+                  index < activeStep - 1 ? "text-gray-500" : "text-gray-800"
                 }`}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +37,7 @@ export const StepperIndicator = ({ activeStep, totalSteps }) => {
             {index < totalSteps - 1 && (
               <div
                 className={`flex w-full h-0.5 ${
-                  index < activeStep - 1 ? "bg-blue-600" : "bg-gray-200"
+                  index < activeStep - 1 ? "bg-blue-700" : "bg-gray-200"
                 }`}
               ></div>
             )}

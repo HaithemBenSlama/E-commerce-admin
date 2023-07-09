@@ -1,12 +1,10 @@
 import React from "react";
 import CustomInput from "@/components/CustomInput";
-import PrimaryButton from "@/components/PrimaryButton";
-import { FaRegSave } from "react-icons/fa";
 const GeneralInfo = () => {
   return (
     <div className="row-span-2 col-span-1 rounded-2xl shadow-xl bg-gray-200 p-5 px-10 mx-28 flex flex-col justify-between">
       <div>
-        <h6 className="text-lg font-bold underline mb-2">
+        <h6 className="text-xl font-bold underline mb-4">
           General Information
         </h6>
 

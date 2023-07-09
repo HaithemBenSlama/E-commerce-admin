@@ -13,7 +13,7 @@ function NewAdmin() {
       <Breadcrumbs path={links} terminalPath={"Add Admin"} />
       <Title text={"Add new Admin"} />
       <div className="mt-10 ml-64 flex items-center justify-center">
-        <StepperIndicator activeStep={2} totalSteps={3} />
+        <StepperIndicator activeStep={1} totalSteps={3} />
       </div>
       <GeneralInfo />
     </Layout>
