@@ -8,7 +8,7 @@ const GeneralInfo = ({ setActiveStep }) => {
           General Information
         </h6>
 
-        <div class="grid gap-6 md:grid-cols-2 mb-3">
+        <div className="grid gap-6 md:grid-cols-2 mb-3">
           <CustomInput
             disabled={false}
             error={false}
@@ -32,7 +32,7 @@ const GeneralInfo = ({ setActiveStep }) => {
             type={"text"}
           />
         </div>
-        <div class="grid gap-6 md:grid-cols-2 mb-3">
+        <div className="grid gap-6 md:grid-cols-2 mb-3">
           <CustomInput
             disabled={false}
             error={false}
@@ -56,7 +56,7 @@ const GeneralInfo = ({ setActiveStep }) => {
             type={"number"}
           />
         </div>
-        <div class="grid gap-6 md:grid-cols-2 mb-3">
+        <div className="grid gap-6 md:grid-cols-2 mb-3">
           <CustomInput
             disabled={false}
             error={false}

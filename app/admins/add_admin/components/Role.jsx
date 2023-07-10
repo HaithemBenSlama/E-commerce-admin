@@ -21,7 +21,7 @@ const Role = ({ setActiveStep }) => {
         defaultValue={"Choose Role"}
         setChoice={handleSelect}
       />
-      <p class="my-3 mx-10 text-base font-normal text-gray-600">
+      <p className="my-3 mx-10 text-base font-normal text-gray-600">
         {choice === "topAdmin"
           ? "As a top admin, you have full control over the e-commerce website. You can manage all aspects of the platform, including user accounts, products, orders, and site settings. Your responsibilities include overseeing operations, managing other admins, and ensuring the smooth functioning of the website."
           : choice === "admin"

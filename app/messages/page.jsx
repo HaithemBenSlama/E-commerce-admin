@@ -16,13 +16,13 @@ export default function Messages() {
       <Title text={"Service Support"} />
       <div className="px-10 py-5 flex flex-row h-[500px] gap-1">
         <div className="basis-1/3 bg-gray-200 rounded-lg p-3 shadow-4xl">
-          <h2 class="mb-2 px-8 py-3 text-4xl font-extrabold text-gray-900 ">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+          <h2 className="mb-2 px-8 py-3 text-4xl font-extrabold text-gray-900 ">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
               Chats
             </span>
           </h2>
           <Search />
-          <ol class="mt-3 divide-y-4 bg-gray-300 rounded-lg overflow-y-auto max-h-[300px] ">
+          <ol className="mt-3 divide-y-4 bg-gray-300 rounded-lg overflow-y-auto max-h-[300px] ">
             <ListeIncomingMessage
               img={
                 "https://scontent.ftun10-1.fna.fbcdn.net/v/t39.30808-6/278379010_108857205133658_2458177458228774882_n.jpg?_nc_cat=110&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ntiR4ajyqY0AX-BpafT&_nc_ht=scontent.ftun10-1.fna&oh=00_AfAaoHb3m7tEjhny9jVRzOzQp3iAVPzvnYkbZnQTS6lVdw&oe=64AD9E15"

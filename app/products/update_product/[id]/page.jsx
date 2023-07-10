@@ -120,10 +120,7 @@ export default function UpdateProduct() {
             </div>
 
             <div className="sm:col-span-2">
-              <label
-                htmlFor="item-weight"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
+              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Photos (max:5)
               </label>
 

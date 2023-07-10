@@ -174,7 +174,7 @@ export default function Orders() {
       <Breadcrumbs terminalPath={"Orders"} />
 
       <Title text={"Booking History"} />
-      <p class="mb-4 mx-10 text-lg font-normal text-gray-500 dark:text-gray-400">
+      <p className="mb-4 mx-10 text-lg font-normal text-gray-500 dark:text-gray-400">
         This is a list of latest transactions
       </p>
       <TableOrders columns={columns} data={data} />

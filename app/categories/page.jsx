@@ -69,7 +69,9 @@ export default function Categories() {
       <Breadcrumbs terminalPath={"Categories"} />
 
       <Title text={"Categories Management"} />
-      <p class="mx-16 text-lg font-normal text-gray-500">Add new Categorie</p>
+      <p className="mx-16 text-lg font-normal text-gray-500">
+        Add new Categorie
+      </p>
       <form action="#">
         <div className="grid col-span-3 gap-6 mx-32 -mt-3">
           <div className="col-span-3" />

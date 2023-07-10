@@ -1,11 +1,14 @@
+"use client";
 import React from "react";
 import TablePagination from "./TablePagination";
 import PrimaryButton from "./PrimaryButton";
 import FiltreButton from "./FiltreButton";
 import { AiOutlinePlus } from "react-icons/ai";
 import Search from "./Search";
+import { useRouter } from "next/navigation";
 
 export default function TableProduct({ columns, data, categories }) {
+  const router = useRouter();
   return (
     <section className="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5">
       <div className="mx-auto max-w-screen-xl px-4 lg:px-12">
@@ -18,7 +21,7 @@ export default function TableProduct({ columns, data, categories }) {
               <PrimaryButton
                 icon={<AiOutlinePlus className="h-3.5 w-3.5 mr-2" />}
                 text={"Add new Product"}
-                href={"/products/new_Product"}
+                onClick={() => router.push("/products/new_Product")}
               />
               <div className="flex items-center space-x-3 w-full md:w-auto">
                 <FiltreButton

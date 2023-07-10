@@ -1,6 +1,7 @@
+"use client";
 import Layout from "@/components/Layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import React from "react";
+import React, { useState } from "react";
 import Title from "@/components/Title";
 import CustomInput from "@/components/CustomInput";
 import CustomSelect from "@/components/CustomSelect";
@@ -8,6 +9,10 @@ import CustomUploader from "@/components/CustomUploader";
 import CustomTextArea from "@/components/CustomTextArea";
 export default function NewProduct() {
   const links = [{ text: "Products", href: "/products" }];
+  const [category, setCategory] = useState();
+  const handleSelect = (selectedValue) => {
+    setCategory(selectedValue);
+  };
 
   return (
     <Layout>
@@ -51,6 +56,7 @@ export default function NewProduct() {
                 error={false}
                 errorMessage={"Select a Category*"}
                 defaultValue={"Select a Category"}
+                setChoice={handleSelect}
               />
             </div>
 
@@ -125,10 +131,7 @@ export default function NewProduct() {
             </div>
 
             <div className="sm:col-span-2">
-              <label
-                htmlFor="item-weight"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
+              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Photos
               </label>
 

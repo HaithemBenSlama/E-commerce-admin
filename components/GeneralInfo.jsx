@@ -6,8 +6,8 @@ import { FaRegSave } from "react-icons/fa";
 export const GeneralInfo = () => {
   return (
     <div className="row-span-2 col-span-1  rounded-lg shadow-md bg-gray-100 p-5">
-      <h6 class="text-lg font-bold underline mb-2">General information</h6>
-      <div class="grid gap-6 md:grid-cols-2 mb-3">
+      <h6 className="text-lg font-bold underline mb-2">General information</h6>
+      <div className="grid gap-6 md:grid-cols-2 mb-3">
         <CustomInput
           disabled={false}
           error={false}
@@ -31,7 +31,7 @@ export const GeneralInfo = () => {
           type={"email"}
         />
       </div>
-      <div class="grid gap-6 md:grid-cols-2 mb-3">
+      <div className="grid gap-6 md:grid-cols-2 mb-3">
         <CustomInput
           disabled={false}
           error={false}
@@ -55,7 +55,7 @@ export const GeneralInfo = () => {
           type={"text"}
         />
       </div>
-      <div class="grid gap-6 md:grid-cols-2 mb-3">
+      <div className="grid gap-6 md:grid-cols-2 mb-3">
         <CustomInput
           disabled={false}
           error={false}
@@ -79,7 +79,7 @@ export const GeneralInfo = () => {
           type={"number"}
         />
       </div>
-      <div class="grid gap-6 md:grid-cols-2 mb-3">
+      <div className="grid gap-6 md:grid-cols-2 mb-3">
         <CustomInput
           disabled={false}
           error={false}
