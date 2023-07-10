@@ -7,6 +7,7 @@ const CustomSelect = ({
   error,
   errorMessage,
   defaultValue,
+  setChoice,
 }) => {
   const errorLabelStyle =
     "block mb-2 text-sm font-medium text-red-700 dark:text-red-500";
@@ -17,22 +18,29 @@ const CustomSelect = ({
   const errorInputStyle =
     "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5 pr-8 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500"; // Added 'pr-8' for right padding
   const errorDescStyle = "mt-2 text-sm text-red-600 dark:text-red-500";
+
+  const handleChange = (event) => {
+    const selectedValue = event.target.value;
+    setChoice(selectedValue);
+    console.log(selectedValue);
+  };
+
   return (
     <div>
-      <label
-        htmlFor="category"
-        className={error ? errorLabelStyle : labelStyle}
-      >
+      <label htmlFor={id} className={error ? errorLabelStyle : labelStyle}>
         {label}
       </label>
       <select
         id={id}
         className={error ? errorInputStyle : inputStyle}
         defaultValue="dv"
+        onChange={handleChange}
       >
         <option value="dv">{defaultValue}</option>
-        {options?.map((op) => (
-          <option value={op?.value}>{op?.text}</option>
+        {options?.map((op, index) => (
+          <option key={index} value={op?.value}>
+            {op?.text}
+          </option>
         ))}
       </select>
       <p className={error ? errorDescStyle : "hidden"}>{errorMessage}</p>
