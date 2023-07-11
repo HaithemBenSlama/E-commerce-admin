@@ -1,14 +1,14 @@
 import React from "react";
 
 export default function Table({ list }) {
-  // Calculate the total amount
   const total = list.reduce((accumulator, currentItem) => {
-    return accumulator + currentItem.amount;
+    const amount = currentItem.quantity * currentItem.price;
+    return accumulator + amount;
   }, 0);
 
   return (
     <>
-      <table width="100%" className="mb-10 border-2 border-gray-300">
+      <table width="100%" className="mb-10 border-1 border-gray-300">
         <thead>
           <tr className="bg-gray-100 p-1">
             <td className="font-bold">Name</td>
@@ -25,7 +25,7 @@ export default function Table({ list }) {
               <td>{item?.description}</td>
               <td>{item?.quantity}</td>
               <td>{item?.price + "$"}</td>
-              <td>{item?.amount + "$"}</td>
+              <td>{item?.price * item?.quantity + "$"}</td>
             </tr>
           ))}
         </tbody>
