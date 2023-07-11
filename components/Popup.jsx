@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const Popup = ({ isOpen, onClose, onDelete }) => {
+const Popup = ({ isOpen, onClose, onDelete, message }) => {
   const closeStyle =
     "fixed top-0 left-0 right-0 z-50 hidden items-center justify-center w-full h-screen bg-opacity-75 backdrop-blur-sm";
   const openStyle =
@@ -55,7 +55,7 @@ const Popup = ({ isOpen, onClose, onDelete }) => {
             ></path>
           </svg>
           <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-            Are you sure you want to delete this product?
+            {message}
           </h3>
           <button
             data-modal-hide="popup-modal"

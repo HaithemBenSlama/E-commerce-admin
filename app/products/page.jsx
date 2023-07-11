@@ -1,7 +1,7 @@
 "use client";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Layout from "@/components/Layout";
-import Popup from "@/components/PopupDelete";
+import Popup from "@/components/Popup";
 import TableProduct from "@/components/TableProduct";
 import Title from "@/components/Title";
 import React, { useState } from "react";
@@ -122,6 +122,7 @@ export default function Products() {
         isOpen={isPopupOpen}
         onClose={closePopup}
         onDelete={handleDelete}
+        message={"Are you sure you want to delete this product"}
       />
       <Model
         data={selectedRow?.original}

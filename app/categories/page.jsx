@@ -3,7 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import CustomInput from "@/components/CustomInput";
 import CustomSelect from "@/components/CustomSelect";
 import Layout from "@/components/Layout";
-import Popup from "@/components/PopupDelete";
+import Popup from "@/components/Popup";
 import PrimaryButton from "@/components/PrimaryButton";
 import TableCategories from "@/components/TableCategories";
 import Title from "@/components/Title";
@@ -12,6 +12,7 @@ import { useMemo } from "react";
 import { AiOutlineSave } from "react-icons/ai";
 import { MdDeleteOutline } from "react-icons/md";
 import { PiNotePencilBold } from "react-icons/pi";
+import { dataCategory } from "./variables/data";
 
 export default function Categories() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -104,17 +105,12 @@ export default function Categories() {
           </div>
         </div>
       </form>
-      <TableCategories
-        columns={columns}
-        data={[
-          { c_name: "Phones", c_parent: "-", c_number_product: 10 },
-          { c_name: "iPhone", c_parent: "Phones", c_number_product: 5 },
-        ]}
-      />
+      <TableCategories columns={columns} data={dataCategory} />
       <Popup
         isOpen={isPopupOpen}
         onClose={closePopup}
         onDelete={handleDelete}
+        message={"Are you sure you want to delete this category"}
       />
     </Layout>
   );
