@@ -1,3 +1,4 @@
+"use client";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Layout from "@/components/Layout";
 import Title from "@/components/Title";

@@ -10,18 +10,34 @@ import { MdDeleteOutline } from "react-icons/md";
 import { PiNotePencilBold } from "react-icons/pi";
 import ItemName from "./Components/Table/ItemName";
 import Category from "./Components/Table/Category";
-import Stock from "./Components/Table/Stock";
-import Rating from "./Components/Table/Rating";
-import Sales from "./Components/Table/Sales";
+import Stock from "./Components/Stock";
+import Rating from "./Components/Rating";
+import Sales from "./Components/Sales";
+import { useRouter } from "next/navigation";
+import { HiOutlineInformationCircle } from "react-icons/hi";
+import { Model } from "./Components/Model/Model";
+import { dataProducts } from "./variables/data";
 
 export default function Products() {
+  const router = useRouter();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedRow, setSelectedRow] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const handleDelete = () => {
-    console.log("Deleting product:");
+  const handleDelete = (row) => {
+    console.log("Deleting product: " + selectedRow.original?.p_name);
+  };
+  const handleUpdate = (row) => {
+    setSelectedRow(row);
+    router.push("/products/update_product/" + row.original?.p_id);
+  };
+  const handleInformation = (row) => {
+    setSelectedRow(row);
+    setIsVisible(true);
   };
 
-  const openPopup = () => {
+  const openPopup = (row) => {
+    setSelectedRow(row);
     setIsPopupOpen(true);
   };
 
@@ -67,78 +83,26 @@ export default function Products() {
       {
         Header: "Actions",
         Cell: ({ row }) => (
-          <div className="flex gap-5">
+          <div className="flex gap-1">
             <MdDeleteOutline
               className="text-lg hover:cursor-pointer hover:scale-150 hover:duration-300 hover:text-red-500"
-              onClick={openPopup}
+              onClick={() => openPopup(row)}
             />
-            <PiNotePencilBold className="text-lg hover:cursor-pointer hover:scale-150 hover:duration-300 hover:text-yellow-500" />
+            <PiNotePencilBold
+              className="text-lg hover:cursor-pointer hover:scale-150 hover:duration-300 hover:text-yellow-500"
+              onClick={() => handleUpdate(row)}
+            />
+            <HiOutlineInformationCircle
+              className="text-lg hover:cursor-pointer hover:scale-150 hover:duration-300 hover:text-blue-500"
+              onClick={() => handleInformation(row)}
+            />
           </div>
         ),
       },
     ],
     []
   );
-  const data = useMemo(
-    () => [
-      {
-        p_photo:
-          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
-        p_name: "Apple iMac 27''",
-        p_category: "Desktop PC",
-        p_stock: 100,
-        p_brand: "Apple",
-        p_rating: 4,
-        p_sales: "1.6M",
-        p_revenue: "$3.5M",
-      },
-      {
-        p_photo:
-          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
-        p_name: "Apple iMac 27''",
-        p_category: "Desktop PC",
-        p_stock: 100,
-        p_brand: "Apple",
-        p_rating: 4,
-        p_sales: "1.6M",
-        p_revenue: "$3.5M",
-      },
-      {
-        p_photo:
-          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
-        p_name: "Apple iMac 27''",
-        p_category: "Desktop PC",
-        p_stock: 100,
-        p_brand: "Apple",
-        p_rating: 4,
-        p_sales: "1.6M",
-        p_revenue: "$3.5M",
-      },
-      {
-        p_photo:
-          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
-        p_name: "Apple iMac 27''",
-        p_category: "Desktop PC",
-        p_stock: 100,
-        p_brand: "Apple",
-        p_rating: 4,
-        p_sales: "1.6M",
-        p_revenue: "$3.5M",
-      },
-      {
-        p_photo:
-          "https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png",
-        p_name: "Apple iMac 27''",
-        p_category: "Desktop PC",
-        p_stock: 200,
-        p_brand: "Apple",
-        p_rating: 3.2,
-        p_sales: "1.6M",
-        p_revenue: "$3.5M",
-      },
-    ],
-    []
-  );
+  const data = useMemo(() => dataProducts, []);
   return (
     <Layout>
       <Breadcrumbs terminalPath={"Products"} />
@@ -158,6 +122,11 @@ export default function Products() {
         isOpen={isPopupOpen}
         onClose={closePopup}
         onDelete={handleDelete}
+      />
+      <Model
+        data={selectedRow?.original}
+        isVisible={isVisible}
+        onClose={() => setIsVisible(false)}
       />
     </Layout>
   );
