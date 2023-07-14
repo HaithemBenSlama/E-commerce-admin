@@ -12,7 +12,8 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { CiShoppingBasket } from "react-icons/ci";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import { logo } from "@/public/assets";
+import Image from "next/image";
 const SideBar = () => {
   const inactiveLink =
     "flex mb-2 justify-start items-center gap-4 px-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto";
@@ -23,9 +24,12 @@ const SideBar = () => {
   return (
     <div className="p-6 h-screen bg-white z-20 fixed top-0 w-64 left-0 pt-12">
       <div className="flex flex-col justify-start items-center">
-        <h1 className="text-base text-center cursor-pointer font-bold text-blue-900 border-b border-gray-100 pb-4 w-full">
-          E-commerce Admin
-        </h1>
+        <Image
+          src={logo}
+          alt="logo"
+          className="border-b border-gray-100 pb-4 w-full"
+        />
+
         <div className="my-4 border-b border-gray-100 pb-4 w-full">
           <Link
             href={"/dashboard"}

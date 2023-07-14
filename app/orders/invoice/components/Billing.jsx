@@ -20,7 +20,7 @@ const Billing = () => {
         </li>
         <li className="flex">
           <span className="font-bold mt-5 mr-5 ">Payment Method: </span>
-          <PaymentMethod payment={"Visa"} />
+          <PaymentMethod payment={"Bitcoin"} />
         </li>
       </ul>
     </section>

@@ -2,11 +2,6 @@
 import { useState } from "react";
 import { useTable, usePagination } from "react-table";
 import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
-import { FaFilter } from "react-icons/fa";
-import Search from "./Search";
-import PrimaryButton from "./PrimaryButton";
-import { AiOutlinePlus } from "react-icons/ai";
-import FiltreButton from "./FiltreButton";
 
 const TablePagination = ({ columns, data }) => {
   const [pageIndex, setPageIndex] = useState(0); // initialize pageIndex state

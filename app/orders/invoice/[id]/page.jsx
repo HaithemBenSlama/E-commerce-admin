@@ -5,13 +5,13 @@ import Layout from "@/components/Layout";
 import PrimaryButton from "@/components/PrimaryButton";
 import Title from "@/components/Title";
 import { AiOutlinePrinter } from "react-icons/ai";
-import Table from "./components/Table";
-import Shipping from "./components/Shipping";
-import Billing from "./components/Billing";
-import Footer from "./components/Footer";
-import ClientInfo from "./components/ClientInfo";
-import SocietyInfo from "./components/SocietyInfo";
-import InvoiceInfo from "./components/InvoiceInfo";
+import Table from "../components/Table";
+import Shipping from "../components/Shipping";
+import Billing from "../components/Billing";
+import Footer from "../components/Footer";
+import ClientInfo from "../components/ClientInfo";
+import SocietyInfo from "../components/SocietyInfo";
+import InvoiceInfo from "../components/InvoiceInfo";
 
 const Invoice = () => {
   const handlePrint = () => {
@@ -51,7 +51,7 @@ const Invoice = () => {
                 id: 1,
                 name: "Iphone 11 pro max",
                 description: "Color: Silver",
-                quantity: 3,
+                quantity: 4,
                 price: 3600,
                 amount: 3600,
               },
@@ -60,7 +60,7 @@ const Invoice = () => {
                 name: "Iphone 11 pro max",
                 description: "Color: Silver",
                 quantity: 1,
-                price: 3600,
+                price: 1000,
                 amount: 3600,
               },
             ]}

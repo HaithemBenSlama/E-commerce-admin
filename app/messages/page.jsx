@@ -17,7 +17,7 @@ export default function Messages() {
       <div className="px-10 py-5 flex flex-row h-[500px] gap-1">
         <div className="basis-1/3 bg-gray-200 rounded-lg p-3 shadow-4xl">
           <h2 className="mb-2 px-8 py-3 text-4xl font-extrabold text-gray-900 ">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r to-blue-500 from-sky-300">
               Chats
             </span>
           </h2>
