@@ -215,8 +215,8 @@ const SideBar = () => {
                 <div className="flex-shrink-0">
                   <img
                     className="w-10 h-10 rounded-full"
-                    src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX9c2poL&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDT16UNPh6KXDAz900BHei0Tdsa667Vj3dgiQ4dQvgeqg&oe=64A72556"
-                    alt="Neil image"
+                    src="https://i.ibb.co/Pz4RbtH/309124236-5326592124105141-8747167939274630792-n-1.jpg"
+                    alt="user image"
                   />
                 </div>
                 <div className="flex-1 min-w-0">

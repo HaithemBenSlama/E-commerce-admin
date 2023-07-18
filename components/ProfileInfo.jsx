@@ -8,8 +8,8 @@ export const ProfileInfo = () => {
       <div className="mx-6 ">
         <img
           className="w-24 h-24 rounded-full"
-          src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zNAJerit8EUAX-EH6OZ&_nc_ht=scontent.ftun8-1.fna&oh=00_AfBQKEuE6g250fg92aFpiLiWkPJSKTsJAuyFSHqOSsApHQ&oe=64A72556"
-          alt="Default avatar"
+          src="https://i.ibb.co/Pz4RbtH/309124236-5326592124105141-8747167939274630792-n-1.jpg"
+          alt="avatar"
         />
       </div>
       <div className="-mr-10">

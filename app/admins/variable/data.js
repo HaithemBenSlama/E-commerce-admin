@@ -1,0 +1,36 @@
+export const dataAdmin = [
+  {
+    a_name: "Haithem Ben Slama ",
+    a_email: "haithem.benslama@hotmail.fr",
+    a_img:
+      "https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/309124236_5326592124105141_8747167939274630792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=WTs67GG3LF0AX8dgO7P&_nc_ht=scontent.ftun14-1.fna&oh=00_AfBBz4FfJGx7QWpdvMPvBqoPsDoCSZ-WrgN-OX4Y9wahJA&oe=64AF0E56",
+    a_role: "Moderator",
+    a_position: "Front-end Dev",
+    a_dateLogin: "Apr 23,2023",
+    a_creation: "Apr 1,2021",
+    a_firstName: "Haithem",
+    a_lastName: "Ben Slama",
+    a_country: "Tunisia",
+    a_city: "Kairouan",
+    a_zipCode: 3100,
+    a_phone: "+216 27 660 834",
+    a_organization: "E-commerce",
+  },
+  {
+    a_name: "Oussema Balti ",
+    a_email: "oussema.balti@gamil.com",
+    a_img:
+      "https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-1/280226272_1827996910896032_4535673337188399766_n.jpg?stp=dst-jpg_s320x320&_nc_cat=110&cb=99be929b-59f725be&ccb=1-7&_nc_sid=f67be1&_nc_ohc=MNFd-YJU838AX-XChxs&_nc_ht=scontent.ftun14-1.fna&oh=00_AfAsHvaUAIODm_ku6wtOop0HPqg4d9_DFgkNu_YvOYizZQ&oe=64AEDDB4",
+    a_role: "Admin",
+    a_position: "Marketing",
+    a_dateLogin: "Apr 23,2023",
+    a_creation: "Apr 9,2023",
+    a_firstName: "Oussema",
+    a_lastName: "Balti",
+    a_country: "Tunisia",
+    a_city: "Kairouan",
+    a_zipCode: 3100,
+    a_phone: "+216 57 252 365",
+    a_organization: "E-commerce",
+  },
+];
